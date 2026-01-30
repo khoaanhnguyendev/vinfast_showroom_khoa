@@ -498,7 +498,40 @@ export function Header() {
                           </div>
                         </motion.div>
                       </div>
+                      {/* 360 */}
+                      <Link
+                        to="/chi-tiet-xe"
+                        onClick={() => {
+                          scrollToTop();
+                          setMobileMenuOpen(false);
+                        }}
+                        className={cn(
+                          "block px-3 py-3 text-base font-semibold rounded-md",
+                          isActivePath("/chi-tiet-xe")
+                            ? "bg-primary/10 text-foreground"
+                            : "hover:bg-muted text-foreground"
+                        )}
+                      >
+                        360
+                      </Link>
 
+                      {/* Khuyến mãi */}
+                      <Link
+                        to="/khuyen-mai"
+                        onClick={() => {
+                          scrollToTop();
+                          setMobileMenuOpen(false);
+                        }}
+                        className={cn(
+                          "block px-3 py-3 text-base font-semibold rounded-md",
+                          isActivePath("/khuyen-mai")
+                            ? "bg-primary/10 text-foreground"
+                            : "hover:bg-muted text-foreground"
+                        )}
+                      >
+                        Khuyến mãi
+                      </Link>
+      
                       {/* Các mục đơn ( Đặt cọc) */}
                       <div className="space-y-1">
                         <Link
@@ -675,7 +708,7 @@ export function Header() {
         </div>
 
         {/* Desktop CTA */}
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-4">
+        <div className="hidden md:flex md:flex-1 md:justify-end md:items-center md:gap-4">
           <Link to="/dat-coc" onClick={scrollToTop}>
             <Button>Đăng ký tư vấn</Button>
           </Link>
